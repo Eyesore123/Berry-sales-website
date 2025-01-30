@@ -10,6 +10,7 @@ This website is written with the intent to provide a simple single-page website 
 * Cookie banner
 * Google Map integration which pinpoints the location
 * Dropdown menu for Q & A
+* Scales well on different screen sizes
 
 Images:
 
