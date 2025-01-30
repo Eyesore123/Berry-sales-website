@@ -13,8 +13,9 @@ This website is written with the intent to provide a simple single-page website 
 
 Images:
 
+![berry_sales_website3](https://github.com/user-attachments/assets/a9f06512-e3fc-4afa-9adc-9330db5a5f54)
+
 ![berry_sales_website2](https://github.com/user-attachments/assets/2cdd3635-7ac7-4f0b-a8f6-e011b548c8e9)
 
 ![berry_sales_website](https://github.com/user-attachments/assets/2a629e51-3a7d-49d8-8672-60ec2f359b06)
-
 
