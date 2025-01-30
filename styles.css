@@ -1,0 +1,561 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    width: 100vw;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #C3E6C8, #D8C5E6); /* Gradient from top-left to bottom-right */
+    color: #333;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px; 
+    color: #333; /* Dark text color for contrast */
+    background-color: rgba(255, 255, 255, 0.65); /* Light semi-transparent background for readability */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for definition */
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Assets/IMG_20240819_110155.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    z-index: -1;
+}
+
+h1 {
+    font-size: 3.5em; /* Increased font size */
+    margin-bottom: 20px;
+    color: #2D2D2D; /* Darker shade for better contrast */
+}
+
+h2 {
+    font-size: 2em;
+    color: #2D2D2D; /* Darker shade for better contrast */
+    padding-bottom: 5px;
+    margin-bottom: 50px;
+    width: fit-content;
+    display: inline-block;
+}
+
+p {
+    font-size: 1.5em; /* Increased paragraph size for better readability */
+    margin: 20px 0px;
+}
+
+
+/* Content Sections */
+.content-section {
+    position: relative;
+    padding: 10px 10px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 60px;
+    text-align: center;
+}
+
+/* General Section Styling */
+#contact-us, .whitebg {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85); /* Light background */
+}
+
+#contact-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+    margin: 40px auto;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When the form is visible */
+form.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+input, textarea, button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #C3E6C8;
+    color: #333;
+    border: none;
+    cursor: pointer;
+}
+
+.cookiebutton {
+    margin-left: 20px;
+    vertical-align: middle; /* Align button with text */
+    padding: 10pxpx; 
+    border-radius: 5px;
+    background-color: green; 
+    color: white; 
+    border: 3px solid yellow; 
+    position: relative;
+   
+}
+
+.cookiebutton:hover {
+    color: black;
+}
+
+#cookie-banner p {
+    display: inline-block; /* Keep p and button inline */
+    margin: 0; 
+    padding: 10px 0px;
+}
+
+@media (max-width: 1025px) {
+    
+    header.header {
+        height: 240px;
+    }
+    
+    div#cookie-banner {
+        font-size: 14px; /* Adjust font size for readability */
+        padding: 0% !important;
+    }
+
+    #cookie-banner p {
+        
+        margin: 0; 
+        text-align: center;
+        font-size: 1.2em;
+        padding-top: 30px !important;
+        padding-bottom: 0% !important;
+    }
+
+    .cookiebutton {
+        font-size: 13px; /* Make button text smaller */
+         /* Adjust button size */
+        margin: 20px 10%; /* Adjust button margin */
+        bottom: 0px;
+        border: none;
+        position: relative;
+    }
+
+    section#home.content-section {
+        margin-top: 20px;
+    }
+
+    p.sub-header {
+        font-size: 1.8em;
+        line-height: 1.33em;
+        margin: 0px 5px;
+    }
+
+    p {
+        margin: 0px 10px;
+    }
+
+    div.answer.active p {
+        padding-top: 20px !important;
+        
+    }
+
+    .erikoistarjous {
+        margin-top: 0px !important;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+}
+
+
+button:hover {
+    background-color: #A3D6A8;
+}
+
+/* Scroll Effects */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.4s ease-out, transform 1.2s ease-out;
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1.4s ease-out, transform 1s ease-in-out;
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 1.4s ease-out, transform 1s ease-in-out;
+}
+
+/* Wipe-up Effect */
+.wipe-up {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+/* Apply the wipe-up effect when the section is visible */
+.wipe-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scroll Animation */
+.visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+.sub-header {
+    padding-top: 6%;
+    padding-bottom: 9%;
+    font-size: 2em;
+    line-height: 2em;
+}
+
+ul {
+    padding-top: 50px;
+}
+
+li {
+    list-style-type: none;
+    padding-bottom: 20px;
+    font-size: 1.5em;
+
+}
+
+.centered-input {
+    text-align: center;
+}
+
+
+.image-container img {
+    padding-top: 0px;
+    max-height: 1550px;
+    max-height: 1400px;
+    margin: 0 auto;
+}
+
+/* Wrapper styling */
+
+.content-wrapper {
+    position: relative;
+    padding-top: 50px;
+    overflow: hidden;
+}
+
+/* Image for the entire wrapper */
+.image-container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Behind the content */
+    opacity: 1;
+    transition: opacity 1s ease-in-out; /* Fade out the image */
+    background-color: transparent
+}
+
+/* When the image fades out */
+.fade-out-image .image-container {
+    opacity: 0; /* Fade the image out */
+}
+
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.wipe-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container {
+    padding: 100px;
+}
+
+.erikoistarjous, .qa {
+    margin-top: 100px;
+    
+}
+
+/* test */
+
+
+
+/* media queries */
+
+@media only screen and (max-width: 1025px) {
+    
+    .footer {
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .contact-info p {
+        font-size: 20px;
+        display: inline-block;
+    }
+
+    .image-container {
+        max-width: 100%;
+    }
+
+    div.container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    h2 {
+        max-width: 70% !important;
+        font-size: 28px !important;
+    }
+
+    .trigger{
+        width: 360px;
+    }
+
+    div.dropdown.parent p {
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+    form {
+        max-width: 70%;
+    }
+
+    .content-section.qa h2 {
+        margin-bottom: 0 !important;
+    }
+
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-info, .social-media, .legal-info {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.contact-info h3, .social-media h3 {
+    margin-bottom: 10px;
+}
+
+div.legal-info p {
+    font-size: 18px !important;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.5;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 768px) {
+    .erikoistarjous {
+        max-width: 90%; /* Reduce width for smaller screens */
+        transform: translateX(0); /* Ensure it starts within the viewport */
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(50%); /* Smaller offset for mobile */
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+
+/* For the on-top structure of the footer. Delete this if you want the legal info
+be to the right of the contact info */
+
+    div.footer-container {
+        flex-direction: column;
+    }
+    .contact-info,
+    .legal-info {
+        width: 100%;
+    }
+
+    .contact-info {
+        order: 1;
+    }
+
+    .legal-info {
+        order: 2;
+    }
+
+    div.legal-info {
+        border-top: #2D2D2D 1px solid;
+        margin-top: 50px;
+    }
+
+
+
+        /* For a stylized button: */
+  
+
+@media screen and (min-width: 1025px) {
+
+    .buttonbox {
+        --border-angle: 0deg;
+        border-radius: 5px;
+        width: 114px;
+        height: 53px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 2px 4px hsl(0 0% 0% / 25%);
+        animation: border-angle-rotate 2s infinite linear;
+        border: 0.5rem solid transparent;
+        position: relative;
+        background: linear-gradient(green, green) padding-box,
+            conic-gradient(
+                from var(--border-angle),
+                var(--bg) 25%,
+                #c89de7
+            )
+            border-box;
+        }
+
+    	@keyframes border-angle-rotate {
+        from { --border-angle: 0deg; }
+        to { --border-angle: 360deg; }
+    	}
+    
+  
+        /** boilerplate **/
+        #cookie-banner {
+            --bg: hsl(0, 0%, 100%);
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+  
+    	@property --border-angle {
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+    	}
+
+        .cookiebutton {
+        margin-left: -2px;
+        vertical-align: middle; /* Align button with text */
+        padding: 7px 9px; 
+        border-radius: 0px;
+        background-color: rgb(235, 235, 235); 
+        border: none;
+        color: black; 
+        position: relative;
+        overflow: hidden;
+        font-size: large;
+        letter-spacing: 0.6px;
+        font-style: bold;
+        border: 1px solid #ccc;
+        }
+
+	.cookiebutton:hover {
+    	color: #333;
+        background-color: #d7ffdd;
+	}
+
+	#cookie-banner p {
+    	display: inline-block; /* Keep p and button inline */
+    	vertical-align: middle; /* Ensure text aligns with button */
+    	margin: 0; 
+    	padding: 10px 10px;
+	}
+
+    #cookie-banner p {
+        margin-right: 40px;
+    }
+}
+
+#message-sent {
+    display: block;
+    margin-top: 70px;
+    background-color: rgb(103, 255, 103);
+}
+
+@media screen and (max-width: 1025px) {
+    
+    #message-sent {
+        margin-top: 10px;
+    }
+
+    #message-sent p {
+        padding: 10px;
+    }
+}
+
+#map {
+    display: block;
+    height: 400px;
+    max-width: 1200px;
+}
