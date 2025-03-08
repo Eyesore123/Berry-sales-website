@@ -23,7 +23,7 @@ document.addEventListener('scroll', function () {
 
 document.addEventListener('scroll', function () {
     const upperSliders = document.querySelectorAll('.upper-slider');
-    const contentSections = document.querySelectorAll('.lower-slider');ts
+    const contentSections = document.querySelectorAll('.lower-slider');
     const windowHeight = window.innerHeight;
     const screenWidth = window.innerWidth; 
 
