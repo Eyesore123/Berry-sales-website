@@ -271,45 +271,6 @@
         });
     });
     </script>
-    <script>
-
-        
-
-  // Define initMap first, before loading the script
-    async function initMap() {
-        const location = { lat: 62.05625, lng: 28.22006 };
-        const { Map } = await google.maps.importLibrary("maps");
-        const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-        
-        const map = new Map(document.getElementById('map'), {
-            zoom: 11,
-            center: location,
-            mapId: "Laatumarjat",
-        });
-
-        const marker = new AdvancedMarkerElement({
-            map: map,
-            position: location,
-            title: 'Laatumarjat'
-        });
-    }
-
-    // Load the script with the API key
-    document.addEventListener('DOMContentLoaded', () => {
-        fetch('/api/key')
-        .then(response => response.json())
-        .then(data => {
-            console.log('Received key:', data.key); // Check the received key
-            const script = document.createElement('script');
-            script.src = `https://maps.googleapis.com/maps/api/js?key=${data.key}&libraries=maps,marker&v=beta`;
-            script.async = true;
-            script.onload = initMap;
-            document.head.appendChild(script);
-    });
-
-    });
-
-    </script>
     <script type="module" src="/index.js"></script>
     <script type="module" src="/scripts.js"></script>
 </body>
