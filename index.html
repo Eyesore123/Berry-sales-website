@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Laatumarjat.fi</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/path/to/favicon.ico"> <!-- for Google to add the icon to Google search -->
+    <link rel="icon" type="image/x-icon" href="./Assets/berry.png">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <script
+  src="https://maps.googleapis.com/maps/api/js?key=[YOUR_API_KEY]&callback=initMap"
+  async
+  defer
+></script>
+</head>
+<body>
+
+    <!-- fade-in animation for form --> 
+    <script>
+        window.addEventListener('scroll', function() {
+            var form = document.querySelector('#contact-us form');
+            var formPosition = form.getBoundingClientRect().top;
+            var screenPosition = window.innerHeight;
+    
+            if (formPosition < screenPosition) {
+                form.classList.add('visible');
+            }
+        });
+    </script>
+    
+
+    <header class="header">
+        <h1 class="main-header">Laatumarjat.fi</h1>
+    </header>
+
+    <section id="home" class="content-section">
+        <p class="sub-header" style="font-weight: bold;">Hanki laadukkaat kotimaiset marjat edullisesti ilman turhia välikäsiä ja säästä selvää rahaa! </p>
+    </section>
+
+    <div class="content-wrapper">
+
+
+        <div class="image-container">
+            <img src="./Assets/karpalot.jpg" alt="cranberries">
+        </div>
+
+        <div class="extra-content" style="height: 400px;"></div>
+
+        <section id="services" class="content-section upper-slider slide-in-right">
+            <h2>Marjat</h2>
+            <p>Me keräämme mustikoita, puolukoita, vadelmia, karpaloita ja pihlajanmarjoja.</p>
+        </section>
+
+        <section id="about" class="content-section upper-slider slide-in-left">
+            <h2>Palvelu</h2>
+            <p>Tarjoamme lähimetsistä kerättyjä ja käsinpoimittuja marjoja. Marjojen laatu on erinomainen, hinta erittäin edullinen.</p>
+        </section>
+
+    </div>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="content-section wipe-up whitebg">
+        <h2>Hinnat</h2>
+        <p><u>Edulliset hinnat kaikille marjoille!</u></p>
+        <ul>
+            <li>Mustikat 6 € / litra siivottuina </li>
+            <li>Mustikat 40 € / 10 litraa ilman siivousta</li>
+            <li>Vadelmat: 13 € / litra</li>
+            <li>Puolukat 4 € / litra siivottuina</li>
+            <li>Karpalot 6 € / litra siivottuina</li>
+        </ul>
+    </section>
+
+     <!-- Selling Liners Section -->
+     <section id="liners">
+        <div class="liners content-section">
+            <h2 class="erikoistarjous content-section lower-slider slide-in-right" style="background-color: rgb(217, 255, 50);">Erikoistarjous!</h2>
+            <p class="content-section lower-slider slide-in-left" style="background-color: rgb(217, 255, 50);">Mitä enemmän ostat, sitä enemmän säästät! Saat 10% alennuksen kun ostat vähintään 30 litraa (vadelmia väh. 5 litraa)</p>
+        </div>
+    </section>
+
+    <section id="qa" class="content-section qa">
+        <h2>Usein kysytyt kysymykset</h2>
+
+        <!-- dropdowns -->
+        <div class="container">
+            <div class="dropdown parent">
+                <div class="trigger">Maksutavat
+
+                </div>
+                <div class="answer">
+                    <p>Käteinen, tilisiirto, Paypal.</p>
+                </div>
+            </div>
+            <div class="dropdown parent">
+                <div class="trigger">Toimitus
+
+                </div>
+                <div class="answer">
+                <p>Toimitamme tarvittaessa Rantasalmen keskustaan omilla kauppareissuilla ja suurempia eriä sopimuksen mukaan myös kauemmas. Suosittelemme noutamaan marjat, jotta voitte varata teille sopivan noutoajan.</p>
+                </div>
+            </div>
+            <div class="dropdown parent">
+                <div class="trigger">Marjojen laatu
+
+                </div>
+                <div class="answer">
+                <p>Marjat ovat ensiluokkaisia, mutta kooltaan vaihtelevia. Toimitamme marjat aina mahdollisimman tuoreina. Keräämme ja siivoamme marjoja kuin ne olisivat menossa omaan käyttöön. Jos marjoja jää myymättä, laitamme ne omaan pakastimeen.</p>
+                </div>
+            </div>
+            <div class="dropdown parent">
+                <div class="trigger">Miksi siivotut mustikat maksavat enemmän?
+
+                </div>
+                <div class="answer">
+                <p>Marjojen siivoamiseen kuluu paljon aikaa. Kun siivoaminen jää pois, on enemmän aikaa keräämiselle. Siksi haluamme kannustaa ostajia siivoamaan marjat itse.</p>
+                </div>
+            </div>
+            <div class="dropdown parent">
+                <div class="trigger">Onko neuvotteluvaraa?
+
+                </div>
+                <div class="answer">
+                <p>Aina on neuvotteluvaraa!</p>
+                </div>
+            </div>
+            <div class="dropdown parent">
+                <div class="trigger">Paljonko marjoja on saatavilla?
+
+                </div>
+                <div class="answer">
+                <p>Keräämme marjoja koko satokauden ajan. Marjojen saatavuus riippuu satokauden onnistuneisuudesta ja tilausmääristä. Kannamme marjoja metsästä sitä mukaa kuin saamme uusia tilauksia.</p>
+                </div>
+            <div class="dropdown parent">
+                <div class="trigger">Tarvitsenko ämpärin vai tuleeko ämpäri kaupan päälle?
+
+                </div>
+                <div class="answer">
+                <p>Vadelmat ja pienemmät erät toimitetaan valmiissa rasioissa. Isoja ämpäreitä on rajallinen määrä, joten olisi hienoa jos voisit tuoda omat ämpärisi. Ilmoita jos haluat marjasi pakastuspusseissa pakastusta varten.</p>
+                </div>
+            </div>
+            </div>
+            <div class="dropdown parent">
+                <div class="trigger">Onko tämä yritystoimintaa?
+
+                </div>
+                <div class="answer">
+                <p>Ei ole. Teemme tätä rakkaudesta lajiin ja yksityishenkilöinä haluamme tarjota marjoja ostettavaksi. Marjojen ostaminen kaupasta on kallista, ja tarjoamme siihen nähden paljon edullisemman vaihtoehdon.</p>
+                </div>
+            </div>
+            <div class="dropdown parent">
+                <div class="trigger">Kuka on tehnyt nämä nettisivut?
+
+                </div>
+                <div class="answer">
+                <p>Nämä nettisivut on tehty itse. Jos haluat samanlaiset tai paremmat sivut sinulle tai yrityksellesi, voit laittaa viestiä yhteydenottolomakkeella.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contact-us" class="content-section lower-slider fade-in whitebg">
+        <h2>Ota yhteyttä</h2>
+        <form action="https://formspree.io/f/xeoqdklk" id="contact-form" method="POST">
+            <label for="name">Nimi:</label>
+            <input type="text" id="name" class="centered-input" name="name" required>
+
+            <label for="email">Sähköpostiosoite:</label>
+            <input type="email" id="email" class="centered-input" name="email" required>
+
+            <label for="message">Viesti:</label>
+            <textarea id="message" class="centered-input" name="message" required></textarea>
+
+            <button type="submit">Lähetä viesti</button>
+
+            <div id="message-sent" style="display: none;">
+                <p>Viestisi on lähetetty onnistuneesti! Vastaamme mahdollisimman pian.</p>
+            </div>
+
+        </form>
+    </section>
+
+
+    <div id="map" class="map content-section"></div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3></h3>
+                <p>Puhelinnumero: <i>0449627207</i></p>
+                <p>Sähköposti: <i>joni.putkinen@protonmail.com</i></p>
+                <p>Osoite: <i>Kankaisentie 127, 58900 Rantasalmi</i></p>
+              </div>
+            <div class="legal-info">
+                <p>&copy; 2025 Joni Putkinen.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookie-banner" style="position: fixed; bottom: 0; width: 100%; background: #f1f1f1; display: none; place-items: center; padding: 10px;">
+        <p>Tämä sivusto käyttää tarvittavia evästeitä perustoimintojen mahdollistamiseksi. 
+           <div class="buttonbox">
+            <button class="cookiebutton" onclick="acceptCookies()">Hyväksyn</button>
+           </div>
+        </p>
+    </div>
+    
+    <script>
+
+      // Screen sizes when cookie is not accepted yet
+    
+        if (window.innerWidth > 1000) {
+        document.getElementById('cookie-banner').style.display = 'inline-flex';
+        } else {
+        document.getElementById('cookie-banner').style.display = 'grid';
+        }
+
+    // Cookiebanner disappear when stored cookies are found
+
+        if(localStorage.getItem('cookiesAccepted') === 'true') {
+                document.getElementById('cookie-banner').style.display = 'none';
+            }
+ 
+
+    function acceptCookies() {
+    
+        localStorage.setItem('cookiesAccepted', 'true');
+
+        // Set the cookie to expire after 24 hours (1 day)
+        setCookie('cookiesAccepted', 'true', 1);
+
+        console.log('Cookies accepted');
+        
+
+            // Function to set a cookie
+            function setCookie(name, value, days) {
+                var expires = "";
+                if (days) {
+                    var date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            }
+
+            // Remove cookie banner if cookies are accepted
+            
+            document.getElementById('cookie-banner').style.display = 'none';
+            
+    }
+
+    </script>
+
+<script>
+    document.getElementById('contact-form').addEventListener('submit', async function (e) {
+        e.preventDefault(); // Prevent default form submission
+    
+        const form = e.target;
+        const formData = new FormData(form);
+        const messageSent = document.getElementById('message-sent');
+    
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+    
+            if (response.ok) {
+                messageSent.style.display = 'block';
+               
+            } else {
+                // Handle error, display an error message, or redirect to an error page
+                alert('Viestiä ei voitu lähettää. Yritä uudelleen myöhemmin.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Yhteysvirhe. Yritä uudelleen.');
+        }
+    });
+    </script>
+    <script>
+
+        
+
+  // Define initMap first, before loading the script
+    async function initMap() {
+        const location = { lat: 62.05625, lng: 28.22006 };
+        const { Map } = await google.maps.importLibrary("maps");
+        const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+        
+        const map = new Map(document.getElementById('map'), {
+            zoom: 11,
+            center: location,
+            mapId: "Laatumarjat",
+        });
+
+        const marker = new AdvancedMarkerElement({
+            map: map,
+            position: location,
+            title: 'Laatumarjat'
+        });
+    }
+
+
+    </script>
+    <script type="module" src="index.js"></script>
+    <script type="module" src="scripts.js"></script>
+</body>
+</html>
