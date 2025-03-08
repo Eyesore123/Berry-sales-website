@@ -1,4 +1,4 @@
-import Dropdown from './dropdown.js';
+import Dropdown from '/dropdown.js';
 
 // Create dropdowns
 
