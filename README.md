@@ -1,6 +1,7 @@
 # Berry sales website
+EDIT: Please note that this website has been upgraded and this repo contains the old version of the site. Use the link to see the previous version of the site in github pages (without Google Maps on the bottom). You can see the upgraded version [here](https://laatumarjat.fi).
 
-This website is written with the intent to provide a simple single-page website that's suitable for providing all the relevant info for the customers of the business.
+This website was written with the intent to provide a simple single-page website that's suitable for providing all the relevant info for the customers of the business.
 
 # Features
 
